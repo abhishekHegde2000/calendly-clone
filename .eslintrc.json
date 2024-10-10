@@ -1,38 +1,38 @@
 {
-  "$schema": "https://json.schemastore.org/eslintrc",
-  "root": true,
-  "extends": [
-    "next/core-web-vitals",
-    "prettier",
-    "plugin:tailwindcss/recommended"
-  ],
-  "plugins": ["tailwindcss", "globals"],
-  "ignorePatterns": [
-    "**/fixtures/**",
-    "**/cypress/**",
-    "**/coverage/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/node_modules/**"
-  ],
-  "rules": {
-    "@next/next/no-html-link-for-pages": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "tailwindcss/classnames-order": "error"
-  },
-  "settings": {
-    "tailwindcss": {
-      "callees": ["cn", "cva"],
-      "config": "tailwind.config.cjs"
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "root": true,
+    "extends": [
+        "next/core-web-vitals",
+        "prettier",
+        "plugin:tailwindcss/recommended"
+    ],
+    "plugins": ["tailwindcss", "globals"],
+    "ignorePatterns": [
+        "**/fixtures/**",
+        "**/cypress/**",
+        "**/coverage/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/node_modules/**"
+    ],
+    "rules": {
+        "@next/next/no-html-link-for-pages": "off",
+        "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/classnames-order": "error"
     },
-    "next": {
-      "rootDir": ["src/*/"]
-    }
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parser": "@typescript-eslint/parser"
-    }
-  ]
+    "settings": {
+        "tailwindcss": {
+            "callees": ["cn", "cva"],
+            "config": "tailwind.config.cjs"
+        },
+        "next": {
+            "rootDir": ["src/*/"]
+        }
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "parser": "@typescript-eslint/parser"
+        }
+    ]
 }
