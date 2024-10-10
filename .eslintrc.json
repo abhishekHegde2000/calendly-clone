@@ -6,24 +6,32 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["tailwindcss"],
+  "plugins": ["tailwindcss", "globals"],
+  "ignorePatterns": [
+    "**/fixtures/**",
+    "**/cypress/**",
+    "**/coverage/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/node_modules/**"
+  ],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-key": "off",
-    "tailwindcss/no-custom-classname": "off"
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "error"
   },
   "settings": {
     "tailwindcss": {
-      "callees": ["cn"],
-      "config": "tailwind.config.js"
+      "callees": ["cn", "cva"],
+      "config": "tailwind.config.cjs"
     },
     "next": {
-      "rootDir": ["./"]
+      "rootDir": ["src/*/"]
     }
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parser": "@typescript-eslint/parser"
     }
   ]
