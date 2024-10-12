@@ -1,12 +1,24 @@
-import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
+import { redirect } from "next/navigation"
 
-export default function Home() {
+export default function HomePage() {
+    // const { userId } = auth()
+    // if (userId != null) redirect("/events")
+
     return (
-        <div>
-            <h1 className="container text-4xl font-bold">Hello everyone</h1>
-            <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-                hi
-            </button>
+        <div className="container mx-auto my-4 text-center">
+            <h1 className="mb-4 text-3xl">Fancy Home Page</h1>
+            <div className="flex justify-center gap-2">
+                <Button asChild>
+                    <SignInButton />
+                </Button>
+                <Button asChild>
+                    <SignUpButton />
+                </Button>
+                <UserButton />
+            </div>
         </div>
     )
 }
