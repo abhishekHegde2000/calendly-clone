@@ -6,32 +6,46 @@
         "prettier",
         "plugin:tailwindcss/recommended"
     ],
-    "plugins": ["tailwindcss", "globals"],
+    "plugins": [
+        "tailwindcss"
+        // "globals"
+    ],
     "ignorePatterns": [
         "**/fixtures/**",
         "**/cypress/**",
         "**/coverage/**",
         "**/dist/**",
         "**/build/**",
-        "**/node_modules/**"
+        "**/node_modules/**",
+        "**/.vscode/**"
     ],
     "rules": {
-        "@next/next/no-html-link-for-pages": "off",
-        "tailwindcss/no-custom-classname": "off",
-        "tailwindcss/classnames-order": "error"
+        // "@next/next/no-html-link-for-pages": "off",
+        // "tailwindcss/no-custom-classname": "off",
+        // "tailwindcss/classnames-order": "error"
     },
-    "settings": {
-        "tailwindcss": {
-            "callees": ["cn", "cva"],
-            "config": "tailwind.config.cjs"
-        },
-        "next": {
-            "rootDir": ["src/*/"]
-        }
-    },
+    // "settings": {
+    //     "tailwindcss": {
+    //         "callees": [
+    //             "cn",
+    //             "cva"
+    //         ],
+    //         "config": "tailwind.config.cjs"
+    //     },
+    //     "next": {
+    //         "rootDir": [
+    //             "src/*/"
+    //         ]
+    //     }
+    // },
     "overrides": [
         {
-            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "files": [
+                "*.ts",
+                "*.tsx"
+                // "*.js",
+                // "*.jsx"
+            ],
             "parser": "@typescript-eslint/parser"
         }
     ]
